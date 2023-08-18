@@ -1,0 +1,20 @@
+.recommend {
+  width: 100%;
+
+  .ant-skeleton {
+    width: 100%;
+  }
+
+  ul.slick-dots.slick-dots-bottom {
+    width: 100%;
+
+    >li {
+      margin: 0 4px;
+
+      button {
+        height: 12px;
+        background: #000;
+      }
+    }
+  }
+}

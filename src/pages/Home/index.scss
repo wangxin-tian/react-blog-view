@@ -1,0 +1,15 @@
+.home-container {
+  width: 100%;
+  display: flex;
+
+  .left {
+    width: 200px;
+    margin-right: 15px;
+    height: 100%;
+  }
+
+  .right {
+    width: 0;
+    flex: auto;
+  }
+}

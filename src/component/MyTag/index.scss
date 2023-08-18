@@ -1,0 +1,17 @@
+.my-tag {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1.5;
+  padding: 0 .25em;
+  background-color: rgba(240, 240, 240, .9);
+  font-size: var(--Font-Size-Content-Medium);
+  border: 1px solid var(--Color-Crystal);
+  margin-inline-end: 0px;
+
+  .point {
+    margin-right: 0.25em;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+  }
+}

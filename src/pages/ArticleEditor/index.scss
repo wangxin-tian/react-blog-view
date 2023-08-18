@@ -1,0 +1,141 @@
+.article-editor {
+
+    .ant-switch .ant-switch-handle::before {
+        right: 0;
+        left: 0;
+    }
+
+    .ant-switch .ant-switch-handle {
+        left: 2px;
+    }
+
+    .ant-switch.ant-switch-checked .ant-switch-handle {
+        left: calc(100% - 20px);
+    }
+
+    .ant-btn {
+        padding: 4px 10px;
+    }
+
+    >* {
+        margin-bottom: 15px;
+    }
+
+    >div>h1,
+    >.ant-float-btn {
+        margin-bottom: 0px;
+
+    }
+
+    .edit-head {
+        text-align: left;
+        display: flex;
+
+        >* {
+            margin-right: 10px;
+        }
+
+        >:last-child {
+            margin: 0;
+        }
+
+        .ant-select-arrow {
+            right: 11px;
+        }
+    }
+
+
+    .state-config {
+        display: flex;
+        align-items: center;
+
+        >* {
+            margin-right: 20px;
+        }
+    }
+
+    .image-pick {
+        display: flex;
+        max-width: 100%;
+
+        >:first-child {
+            margin-right: 20px;
+        }
+
+        div.ant-image {
+
+            height: 200px;
+
+            .ant-image-img {
+                height: 100%;
+                width: auto;
+                aspect-ratio: 16/9;
+            }
+        }
+
+        .img-drag {
+            width: 150px;
+            height: 75px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.1);
+            border: 1px dashed #d9d9d9;
+            border-radius: 8px;
+            transition: border-color 0.3s;
+
+            &:hover {
+                border-color: #4096ff;
+            }
+        }
+    }
+
+    .article-editor {
+        width: 100%;
+        height: 600px;
+
+        .editor-container .sec-md .editor-input {
+            font-size: var(--Font-Size-Content-Large);
+            line-height:1.6;
+            font-family: var(--Font-Family-Global);
+        }
+    }
+
+    .small-screen-style & {
+        .edit-head {
+            flex-wrap: wrap;
+            margin-bottom: 0px;
+
+            input {
+                margin-right: 0px;
+            }
+
+            >* {
+                margin-bottom: 15px;
+            }
+        }
+
+        .state-config {
+            flex-wrap: wrap;
+            margin-bottom: 0px;
+
+            >* {
+                margin-bottom: 15px;
+            }
+        }
+
+        .image-pick {
+
+            div.ant-image {
+                height: 100px;
+            }
+
+            .img-drag {
+                box-sizing: border-box;
+                width: 100px;
+                height: 50px;
+            }
+        }
+    }
+}

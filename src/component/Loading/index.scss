@@ -1,0 +1,33 @@
+.loading {
+    font-size: var(--Font-Size-Title-Large);
+    position: fixed;
+    z-index: 50;
+    top: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    position: none;
+
+    .loading-text {
+        display: inline-block;
+        margin: 0 .2em;
+        animation: loading-text-animation 1s ease-out 0s alternate;
+        animation-fill-mode: both;
+    }
+
+    @keyframes loading-text-animation {
+        from {
+            transform: translateY(-.25em);
+            opacity: 1;
+        }
+
+        50% {
+            transform: translateY(.25em);
+            opacity: .5;
+        }
+
+        to {
+            transform: translateY(.25em);
+            opacity: .5;
+        }
+    }
+}

@@ -1,0 +1,96 @@
+.App {
+  text-align: center;
+  font-size: var(--Font-Size-Content-Medium);
+
+  >.content-wrap {
+    padding: 20px 10px;
+    box-sizing: border-box;
+    margin: auto;
+    width: clamp(80%, 768px, 100%);
+    box-shadow: var(--Box-Shadow-Glass);
+  }
+}
+
+//消息框
+div.ant-message {
+  top: 50px !important;
+}
+
+//确认框
+div {
+  
+  &.ant-modal-mask,
+  &.ant-modal-wrap {
+    width: 100%;
+  }
+}
+
+//图片
+div.ant-image {
+  vertical-align: bottom;
+  overflow: hidden;
+
+  div.ant-image-mask {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .ant-image-img {
+    pointer-events: none;
+    transition: all 0.3s ease-out 0s;
+  }
+
+  &:hover {
+    .ant-image-img {
+      transform: scale(1.1);
+    }
+  }
+}
+
+//图片加载、错误
+div.ant-image.ant-image-error {
+  background-color: #ccc;
+
+  .ant-image-img {
+    width: 100%;
+    height: auto; 
+    aspect-ratio: 16/9;
+  }
+}
+
+//图片预览
+div {
+
+  &.ant-image-preview-wrap,
+  &.ant-image-preview-mask {
+    width: 100%;
+
+    div.ant-image-preview-body {
+      width: 100%;
+      height: 100%;
+
+      div.ant-image-preview-img-wrapper {
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        height: 100%;
+      }
+    }
+  }
+}
+
+ul.ant-image-preview-operations {
+  top: 0;
+  left: 0;
+}
+
+//骨架屏
+.ant-skeleton-active {
+  *::after {
+    width: 400%;
+    right: -150%;
+  }
+}

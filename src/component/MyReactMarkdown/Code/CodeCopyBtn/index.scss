@@ -1,0 +1,33 @@
+.code-copy-btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: none;
+
+    .copy-btn {
+        padding: 5px;
+        font-size: var(--Font-Size-Content-Small);
+        line-height: 1;
+        border-radius: 5px;
+        color: #fff;
+        background-color: #d9534f;
+        border-color: #d43f3a;
+    }
+
+    .ant-btn-default:not(:disabled):hover {
+        color: var(--Color-Crystal) !important;
+        border-color: var(--Color-Crystal) !important;
+    }
+
+    .ant-btn {
+        height: auto;
+    }
+
+    pre.blog-pre:hover & {
+        display: block;
+    }
+
+    pre.blog-pre.active & {
+        display: block;
+    }
+}

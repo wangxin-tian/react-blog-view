@@ -1,13 +1,74 @@
+
 body {
+  font-family: var(--Font-Family-Global);
+  src: url(./assets/font/FZMIAOWUJW.TTF);
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#bg {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./assets/bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  background-position: center top;
+}
+
+#bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--Color-Mask);
+}
+
+.global-style {
+  --Color-Info: #eee;
+  --Color-Mask: rgba(178, 178, 178, 0.88);
+  --Color-Theme: rgb(var(--Color-Theme-RGB));
+  --Color-Theme-RGB: 19, 105, 190;
+  --Color-Crystal: #a600a6;
+  --Box-Shadow-Glass: 0 1px 2px -2px rgb(0 0 0 / 16%),
+    0 3px 6px 0 rgb(0 0 0 / 12%), 0 5px 12px 4px rgb(0 0 0 / 9%);
+  --Font-Size-Content-Small: 16px;
+  --Font-Size-Content-Medium: 18px;
+  --Font-Size-Content-Large: 20px;
+  --Font-Size-Title-Small: 22px;
+  --Font-Size-Title-Medium: 24px;
+  --Font-Size-Title-Large: 26px;
+  --Font-Family-Global: '方正喵呜简体', sans-serif, NospzGothicMoe, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue;
+}
+
+.small-screen-style {
+  --Font-Size-Content-Small: 12px;
+  --Font-Size-Content-Medium: 14px;
+  --Font-Size-Content-Large: 16px;
+  --Font-Size-Title-Small: 18px;
+  --Font-Size-Title-Medium: 20px;
+  --Font-Size-Title-Large: 22px;
+}
+
+.small-screen-style #bg {
+  background-position: calc(100% + 100px) calc(100% + 10px);
+}
+
+.small-screen-style .small-screen-hide {
+  display: none !important;
+}
+
+body:not(.small-screen-style) .small-screen-show {
+  display: none !important;
 }

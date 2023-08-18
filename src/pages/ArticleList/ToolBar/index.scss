@@ -1,0 +1,12 @@
+.tool-bar {
+  display: flex;
+  flex-wrap: wrap;
+
+  button.ant-btn {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: var(--Font-Size-Content-Medium);
+    padding-bottom: 1px;
+    height: auto;
+  }
+}

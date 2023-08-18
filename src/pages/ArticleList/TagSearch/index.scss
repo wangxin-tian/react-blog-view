@@ -1,0 +1,32 @@
+.tag-search {
+  position: relative;
+
+  .tag-wrapper {
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+
+    .tag-link {
+      margin-bottom: 10px;
+      margin-right: 10px;
+    }
+  }
+
+  .view-more-wrapper {
+    margin-bottom: 10px;
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      pointer-events: none;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      background: linear-gradient(180deg, #ffffff33, #ffffff99);
+      filter: blur(3px);
+    }
+  }
+
+}
